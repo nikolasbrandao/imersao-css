@@ -28,8 +28,9 @@ body::after {
 }
 
 a {
-  text-decoration: none;
   color: #635362;
+  font-family: 'Open Sans', sans-serif;
+  text-decoration: none;
 }
 a:hover {
   text-decoration: underline;
