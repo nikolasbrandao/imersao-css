@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Oxygen&display=swap');
+
+body {
+  height:100vh;
+  background-color: #F9F5F3;
+}
+
+body::after {
+  content: "";
+  background: url('../assets/wall.jpg');
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+}
+
+
+.menu li {
+  list-style: none;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+a {
+  text-decoration: none;
+  color: #635362;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+h1,h2 {
+  color: #08264E;
+  font-family: 'Oxygen', sans-serif;
+  text-align: center;
+}
+
+footer {
+  position: fixed;
+  bottom: .2em;
+  right: 1em;
+}
+
+footer small {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10px;
+  color: #CF916B;
+}
