@@ -1,30 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Oxygen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Oxygen:wght@300;400;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
   height:100vh;
   background-color: #F9F5F3;
+  background-image: url('../assets/wall.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0 2em;
 }
 
-body::after {
-  content: "";
-  background: url('../assets/wall.jpg');
-  opacity: 0.5;
+header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.menu  {
+  background-color: #F9F5F3;
+  background: linear-gradient(180deg, rgba(255,202,175,1) 0%, rgba(249,245,243,1) 54%);
+  opacity: .9;
+  position: fixed;
   top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;   
+  width: 100vw;
+  padding: 0 2em;
 }
 
+.menu ul {
+opacity: 1;
+  display: flex;
+  justify-content: space-between;
+}
 
 .menu li {
   list-style: none;
 }
 
-.menu ul {
-  display: flex;
-  justify-content: space-around;
+.menu a {
+  display: block;
+  padding: 0.5em;
 }
 
 a {
@@ -32,14 +51,69 @@ a {
   font-family: 'Open Sans', sans-serif;
   text-decoration: none;
 }
+
 a:hover {
   text-decoration: underline;
 }
 
-h1,h2 {
+h1,h2,h3,h4,h5,h6 {
   color: #08264E;
   font-family: 'Oxygen', sans-serif;
   text-align: center;
+}
+
+@media(min-width: 768px) {
+  body {
+    padding: 0 5em;
+  }
+  .menu {
+    padding: 0 5em;
+  }
+}
+
+section h3 {
+  text-align: left;
+  color: #003049;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 1em 0 1em 0;
+}
+
+article p {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.2em;
+  color: #33415c;
+  margin-bottom: 0.3em;
+}
+
+article h4 {
+  text-align: left;
+  color: #d62828;
+  margin-bottom: .4em;
+}
+
+h4 i {
+  font-style: italic;
+  color: #33415c;
+  font-weight: 400;
+}
+
+article b {
+  font-family: 'Open Sans', sans-serif;
+  color: #5c677d;
+  font-weight: 400;
+  font-size: .9em;
+  margin-bottom: .3em;
+}
+
+article li {
+  font-family: 'Open Sans', sans-serif;
+  color: #33415c;
+  margin: .5em 0 .5em 0;
+}
+
+.experience {
+  margin-bottom: 1.5em;
 }
 
 footer {
