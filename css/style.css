@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Oxygen:wght@300;400;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +13,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   padding: 0 2em;
+  font-family: 'Open Sans', sans-serif;
 }
 
 header{
@@ -48,7 +50,6 @@ opacity: 1;
 
 a {
   color: #635362;
-  font-family: 'Open Sans', sans-serif;
   text-decoration: none;
 }
 
@@ -61,14 +62,23 @@ h1,h2,h3,h4,h5,h6 {
   font-family: 'Oxygen', sans-serif;
   text-align: center;
 }
+.resume {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+}
 
-@media(min-width: 768px) {
-  body {
-    padding: 0 5em;
-  }
-  .menu {
-    padding: 0 5em;
-  }
+.resume h3 {
+  text-align: center;
+}
+
+.group-experiences {
+  display: grid;
+  gap: .5em;
+  column-gap: 3em;
+  justify-content: center;
+  align-content: center;
 }
 
 section h3 {
@@ -80,7 +90,6 @@ section h3 {
 }
 
 article p {
-  font-family: 'Open Sans', sans-serif;
   line-height: 1.2em;
   color: #33415c;
   margin-bottom: 0.3em;
@@ -99,7 +108,6 @@ h4 i {
 }
 
 article b {
-  font-family: 'Open Sans', sans-serif;
   color: #5c677d;
   font-weight: 400;
   font-size: .9em;
@@ -107,13 +115,25 @@ article b {
 }
 
 article li {
-  font-family: 'Open Sans', sans-serif;
   color: #33415c;
   margin: .5em 0 .5em 0;
 }
 
 .experience {
   margin-bottom: 1.5em;
+}
+
+.experience img {
+  height: 50px;
+  width: auto; 
+  margin-left: .5em;
+}
+
+.experience figure {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
 }
 
 footer {
@@ -123,7 +143,22 @@ footer {
 }
 
 footer small {
-  font-family: 'Open Sans', sans-serif;
   font-size: 10px;
   color: #CF916B;
+}
+
+@media(min-width: 768px) {
+  body {
+    padding: 0 5em;
+  }
+  .menu {
+    padding: 0 5em;
+  }
+  
+  .group-experiences{
+    grid-template-columns: 30% 30% 30%;
+  }
+  .resume article {
+    max-width: 60vw;
+  }
 }
